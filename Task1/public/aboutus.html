@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+		<link rel="stylesheet" type="text/css" href="aboutStyle.css">
+		<script src="https://kit.fontawesome.com/20c86748b1.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<script >
+	
+function openNav() {
+	document.getElementById("sidenav").style.display = "none";
+  document.getElementById("collapseSidebar").style.width = "100px";
+  document.getElementById("maincontent").style.marginLeft = "120px";
+  
+
+}
+
+function closeNav() {
+  document.getElementById("collapseSidebar").style.width = "0";
+  document.getElementById("maincontent").style.marginLeft= "260px";
+    document.getElementById("sidenav").style.display = "block";
+
+}
+
+</script>
+<body>
+<div class="main">
+
+	<header class="Header">
+		<img onclick="document.location='index.html'" src="./images/logo.png" alt="Home Logo">
+		<h1>My First Website By Bitrupt</h1>
+	</header>
+
+	
+
+<div class="MainContent" id="maincontent">
+
+	<div class="Content">
+		
+
+		<h1>About Us</h1>
+		<p>In this consistently evolving condition, keeping a competitive edge means being able to anticipate and respond rapidly to changing buisness conditions. Bitrupt is a software development company giving IT solutions to small and large scale businesses. Combining demonstrated mastery in innovation, and an understanding of emerging business trends, we deiver a range of software development solutions.</p>
+		
+	</div>
+	<div class="Image">
+				<img src="./images/about-1.jpg" alt="about">
+
+	</div>
+ 
+</div>
+</div>
+
+<div id="collapseSidebar" class="collapseSidebar">
+
+
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="index.html"> <i class="fa-solid fa-house-chimney" style="font-size:20px;color:black;"></i></a>
+  <a href="profile.html"><i class="fa-solid fa-user" style="font-size:20px;color:black;"></i></a>
+  <a href="aboutus.html"><i class="fa-solid fa-users" style="font-size:20px;color:black;"></i></a>
+  <a href="contactus.html"><i class="fa-solid fa-envelope" style="font-size:20px;color:black;"></i></a>
+  <button class="login" onclick="document.location='login.html'"><i class="fa-solid fa-right-from-bracket" style="font-size:20px;color:black;"></i></button>
+</div>
+<div class="SideNav" id="sidenav">
+<button class="openbtn" onclick="openNav()">☰ </button>
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="contactus.html">Contact Us</a>
+
+		<button class="logout" onclick="document.location='login.html'">Log out</button>
+</div>
+
+</body>
+</html>

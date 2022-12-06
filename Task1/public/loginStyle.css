@@ -1,0 +1,117 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+.Container {
+ background-color:  #a7a6a6fa;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+.LoginContainer{
+	height:350px;
+	width:32% ; 
+	background-color: rgba(255,255,255,0.2);
+	padding: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 2px;
+
+}
+.form{
+	height:350px;
+	width:100% ; 
+	background-color: transparent;
+	padding: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 2px;
+}
+
+.LoginContainer input[type="email"]{
+
+	width:100%;
+	height:50px;
+	color:grey;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 2px;
+	border: none;
+}
+.LoginContainer input[type="password"]{
+
+	width:100%;
+	height:50px;
+	color:grey;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 2px;
+	border: none;
+}
+
+.LoginContainer input[type="submit"]{
+
+	background-color: #000000b5;
+	border:none;
+	color:white;
+	width: 100px;
+	height: 30px;
+}
+
+
+.LoginContainer input[type="submit"]:hover{
+
+cursor: pointer;
+}
+.alert {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width:500px;
+	height:130px;
+	transform: translate(-50%,-50%);
+  padding: 20px 0px 10px 0px;
+  background-color: white;
+  border-radius: 8px;
+  color: grey;
+  display: none;
+}
+
+.alert  strong {
+
+margin:0px 20px;
+}
+.alert  p {
+
+margin: 0px 20px 25px 20px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: #13ace7;
+  font-weight: bold;
+ position:absolute;
+ right:25px;
+ bottom: 10px;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: darkblue;
+}
+
+
+

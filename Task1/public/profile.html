@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	<link rel="stylesheet" type="text/css" href="profileStyle.css">
+    <script src="https://kit.fontawesome.com/20c86748b1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<script >
+  
+function openNav() {
+  document.getElementById("sidenav").style.display = "none";
+  document.getElementById("collapseSidebar").style.width = "100px";
+  document.getElementById("maincontent").style.marginLeft = "120px";
+  
+
+}
+
+function closeNav() {
+  document.getElementById("collapseSidebar").style.width = "0";
+  document.getElementById("maincontent").style.marginLeft= "260px";
+    document.getElementById("sidenav").style.display = "block";
+
+}
+
+</script>
+<body>
+  <div class="main">
+
+	<header class="Header">
+		<img onclick="document.location='index.html'" src="./images/logo.png" alt="Home Logo">
+		<h1>My First Website By Bitrupt</h1>
+	</header>
+
+
+<div class="MainContent" id="maincontent">
+ <div class="Content">
+	<table>
+		<tr >
+    <th colspan="3"  style="background-color:#d3d3d3fa;  margin-right:40px;" >TRAINEE PROGRAM</th>
+    
+  </tr>
+  <tr>
+    <th width="10%">Tasks</th>
+    <th width="74%">Description</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td> Task1</td>
+    <td>Home Page</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>Task2</td>
+    <td> Contact Us Page</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>Task3 </td>
+    <td>Form validation through javascript</td>
+    <td>Incompleted</td>
+  </tr>
+  <tr>
+    <td>Task4 </td>
+    <td>Routing to different locations on click</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td> Task5</td>
+    <td>About Us Page</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>  Task6</td>
+    <td>Collapsable Drawer</td>
+    <td>Incompleted</td>
+  </tr>
+  <tr>
+    <td>  Task7</td>
+    <td>Profile Page</td>
+    <td>In Progress</td>
+  </tr>
+  <tr>
+    <td>  Task8</td>
+    <td>Will be viewed after completion of previous task</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td>  Task9</td>
+    <td>Will be viewed after completion of previous task </td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td>  Task10</td>
+    <td>Will be viewed after completion of previous task </td>
+    <td>Pending</td>
+  </tr>
+</table>
+ </div>
+</div>
+</div>
+
+<div id="collapseSidebar" class="collapseSidebar">
+
+
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="index.html"> <i class="fa-solid fa-house-chimney" style="font-size:20px;color:black;"></i></a>
+  <a href="profile.html"><i class="fa-solid fa-user" style="font-size:20px;color:black;"></i></a>
+  <a href="aboutus.html"><i class="fa-solid fa-users" style="font-size:20px;color:black;"></i></a>
+  <a href="contactus.html"><i class="fa-solid fa-envelope" style="font-size:20px;color:black;"></i></a>
+  <button class="login" onclick="document.location='login.html'"><i class="fa-solid fa-right-from-bracket" style="font-size:20px;color:black;"></i></button>
+</div>
+<div class="SideNav" id="sidenav">
+<button class="openbtn" onclick="openNav()">☰ </button>
+
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="contactus.html">Contact Us</a>
+
+    <button class="logout" onclick="document.location='login.html'">Log out</button>
+</div>
+
+
+</body>
+</html>

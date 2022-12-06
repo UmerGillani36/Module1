@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	<link rel="stylesheet" type="text/css" href="contactStyle.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/20c86748b1.js" crossorigin="anonymous"></script>
+
+	
+</head>
+
+<script>
+function validateForm(event) {
+	event.preventDefault();
+  let name = document.forms["form"]["name"].value;
+  if (name[0].toUpperCase()!=name[0]) {
+  	console.log("runing")
+  	// Swal.fire("Our First Alert", "With some body text!");
+    customAlert("Incorrect Full Name","First Letter of name must be capital!!!");
+     return false;
+  }
+  // return false;
+}
+
+
+function customAlert(strong , p){
+		let parent =document.getElementById('alert');
+		let elem1=document.getElementById('strong');
+		let elem2=document.getElementById('p'); 
+		let container=document.getElementById('overlay_container'); 
+
+
+		elem1.innerText=strong;
+		elem2.innerText=p;
+		container.style.cssText=
+		`
+		position:fixed;
+		z-index:1;
+		width:100vw;
+		height:100vh;
+		top:0;
+		left:0;
+		background:rgba(0,0,0,0.7);
+
+
+		`
+		parent.style.display='block';
+
+}
+
+
+	
+function openNav() {
+	document.getElementById("sidenav").style.display = "none";
+  document.getElementById("collapseSidebar").style.width = "100px";
+  document.getElementById("maincontent").style.marginLeft = "120px";
+  
+
+}
+
+function closeNav() {
+  document.getElementById("collapseSidebar").style.width = "0";
+  document.getElementById("maincontent").style.marginLeft= "260px";
+    document.getElementById("sidenav").style.display = "block";
+
+}
+
+
+
+
+</script>
+<body>
+
+	<div class="main">
+	<header class="Header">
+		<img onclick="document.location='index.html'" src="./images/logo.png" alt="Home Logo">
+		<h1>My First Website By Bitrupt</h1>
+	</header>
+
+
+<div class="MainContent" id="maincontent">
+
+	<div class="Content">
+		
+		<form class="Form" name="form" onsubmit="return  validateForm(event)">
+
+
+			<div class="Input">
+				<label>Full Name:</label>
+				<input type="text" name="name" placeholder="Your name" required>
+
+
+			</div>
+			<div class="Input">
+				<label>Email:</label>
+				<input type="email" name="email" placeholder="Email" required>
+
+			</div>
+			<div class="Input">
+				<label for="countries" >Countries:</label>
+				  <select name="countries" id="countries">
+				    <option value="pakistan">Pakistan</option>
+				    <option value="afghanistan">Afghanistan</option>
+				    <option value="iran">Iran</option>
+				    <option value="use">UAE</option>
+
+				  </select>
+
+
+			</div>
+			<div class="Input" >
+				<label>Subject:</label>
+			<input type="text" name="subject" placeholder="Subject" required>
+
+			</div>
+			<div class="TextArea">
+				<label>Your Message:</label>
+				<textarea id="message" name="message"  rows="7" cols="50" placeholder="Write Something..." required></textarea>
+				
+			
+			</div>
+
+			
+
+			<!-- <input type="password" name="password" placeholder="Password"> -->
+
+
+			<input type="submit" name="submit" >
+		</form>
+
+			<div class="OverlayContainer" id='overlay_container' >
+
+		<div class="alert" id='alert'>
+
+  		<strong id='strong'></strong>
+  		<p id='p'></p>
+  		<hr>
+  		<span class="closebutton" onclick="this.parentElement.parentElement.style.display='none';">Close</span> 
+		</div>
+	<!--  -->
+		</div>
+ 
+	</div>
+
+		<iframe width="50%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=480&amp;hl=en&amp;q=bitrupts,civil%20lines,karachi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure area map</a></iframe>
+ 
+
+
+</div>
+
+</div>
+
+
+<div id="collapseSidebar" class="collapseSidebar">
+
+
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="index.html"> <i class="fa-solid fa-house-chimney" style="font-size:20px;color:black;"></i></a>
+  <a href="profile.html"><i class="fa-solid fa-user" style="font-size:20px;color:black;"></i></a>
+  <a href="aboutus.html"><i class="fa-solid fa-users" style="font-size:20px;color:black;"></i></a>
+  <a href="contactus.html"><i class="fa-solid fa-envelope" style="font-size:20px;color:black;"></i></a>
+  <button class="login" onclick="document.location='login.html'"><i class="fa-solid fa-right-from-bracket" style="font-size:20px;color:black;"></i></button>
+</div>
+<div class="SideNav" id="sidenav">
+<button class="openbtn" onclick="openNav()">☰ </button>
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="contactus.html">Contact Us</a>
+
+		<button class="logout" onclick="document.location='login.html'">Log out</button>
+</div>
+
+
+</body>
+</html>

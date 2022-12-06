@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="indexStyle.css">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body  id="body-pd">
+
+
+	
+
+
+ <header class="header " id="header">
+ 	
+ 	  <div class="header_toggle "><i class="fa-solid fa-bars"  id="header-toggle" style="color: black;"></i>
+ 	   </div>
+ 	  
+  	<p class="h1 text-dark " >My First Website By Bitrupt</p>
+  	<img  class="logo" onclick="document.location='index.html'" src="../images/logo.png" alt="Home Logo"></img>
+    </header>
+
+
+ <div class="l-navbar bg-dark" id="nav-bar">
+        <nav class="nav">
+            <div class="nav_links"> 
+	
+                <div class="nav_list"> 
+                	<a href="index.html" class="nav_logo "><i class="fa-solid fa-b"  style="color: white; font-size:28px;"></i>  <span class="nav_logo-name" style="color:white;">Bitrupts</span> </a>
+                	<a href="index.html" class="nav_link active"> <i class="fa-solid fa-house-chimney" style="color: white"></i>
+                		<span class="nav_name">Home</span> 
+
+                	</a> <a href="profile.html" class="nav_link"> <i class="fa-solid fa-user" style="color: white"></i>
+                		<span class="nav_name">Profile</span> </a> 
+
+                	<a href="about.html" class="nav_link"> <i class="fa-solid fa-users" style="color: white"></i> 
+                		<span class="nav_name">About Us</span> </a>
+
+                	 <a href="contact.html" class="nav_link"> <i class="fa-solid fa-envelope" style="color: white"></i>
+                	 	<span class="nav_name">Contact Us</span> </a>
+
+                	</div>
+            </div>
+             <a href="login.html" class="nav_link"><i class="fa-solid fa-right-from-bracket" style="color: white"></i>
+              <span class="nav_name">Log Out</span> 
+             </a>
+        </nav>
+    </div>
+
+    <div class="container  " >
+
+
+		<div class="mainContent d-flex flex-row w-100 h-100 rounded shadow-lg p-3   bg-white row">
+			<div class="Content col-12 col-sm-12 col-md-12 col-lg-6">
+					<p class="mb-5 h1 text-center">Contact Us</p>
+				<div class="mb-4 row">
+					<label for="name" class="col-sm-2 col-form-label fs-6">Name:</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="name">
+					</div>
+				  </div>
+				  <div class="mb-4 row">
+					<label for="email" class="col-sm-2 col-form-label fs-6">Email:</label>
+					<div class="col-sm-10">
+					  <input type="email" class="form-control" id="email">
+					</div>
+				  </div>
+				  <div class="mb-4 row">
+					<label for="email" class="col-sm-2 mr-md-2 mr-lg-2 col-form-label fs-6">Countries:</label>
+					<div class="col-sm-10">
+
+				  <select class="form-select w-100" style="width:430px" aria-label="Select Countries">
+					<option selected>Pakistan</option>
+					<option value="1">Turkey</option>
+					<option value="2">UAE</option>
+					<option value="3">Iran</option>
+				  </select>
+					</div>
+				  </div>
+
+				  <div class="mb-4 row">
+					<label for="subject" class="col-sm-2 col-form-label fs-6">Subject:</label>
+					<div class="col-sm-10">
+					  <input type="text" class="form-control" id="subject">
+					</div>
+				  </div>
+
+				  <div class="mb-4 row">
+					<label for="message" class="col-sm-2 col-form-label fs-6">Message:</label>
+					<div class="col-sm-10">
+					<textarea class="form-control" id="message" rows="3" maxlength="500"></textarea>
+				</div>
+				  </div>
+
+				  <input class="btn btn-primary col-12 mb-5 mb-sm-5 mb-md-5 mb-lg-2" type="submit" value="Submit">
+
+			</div>
+			<div class="Image  col-12 col-sm-12 col-md-12 col-lg-6 " >
+				<iframe class="rounded" width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=480&amp;hl=en&amp;q=bitrupts,civil%20lines,karachi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure area map</a></iframe>
+			</div>
+		</div>
+
+
+
+ 
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/20c86748b1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/20c86748b1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<script >
+	
+function openNav() {
+	document.getElementById("sidenav").style.display = "none";
+  document.getElementById("collapseSidebar").style.width = "100px";
+  document.getElementById("maincontent").style.marginLeft = "120px";
+  
+
+}
+
+function closeNav() {
+  document.getElementById("collapseSidebar").style.width = "0";
+  document.getElementById("maincontent").style.marginLeft= "260px";
+    document.getElementById("sidenav").style.display = "block";
+
+}
+
+</script>
+<body>
+<div class="main">
+	<header class="Header">
+		<img onclick="document.location='index.html'" src="./images/logo.png" alt="Home Logo">
+		<h1>My First Website By Bitrupt</h1>
+	</header>
+
+	
+
+<div class="MainContent" id="maincontent">
+	<div class="Content">
+
+		<h1>"A Small Team Of A+ Players Can Run Circles Around A Giant Team Of B And C Players."</h1>
+		<span>-Steve Jobs</span>
+		<p>Bitupt is where development experts thrive, helping the most admired companies and young startups build applications that matter.</p>
+	</div>
+	<div class="Image">
+	</div>
+ 
+</div>
+</div>
+
+<div id="collapseSidebar" class="collapseSidebar">
+
+
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="index.html"> <i class="fa-solid fa-house-chimney" style="font-size:20px;color:black;"></i></a>
+  <a href="profile.html"><i class="fa-solid fa-user" style="font-size:20px;color:black;"></i></a>
+  <a href="aboutus.html"><i class="fa-solid fa-users" style="font-size:20px;color:black;"></i></a>
+  <a href="contactus.html"><i class="fa-solid fa-envelope" style="font-size:20px;color:black;"></i></a>
+  <button class="login" onclick="document.location='login.html'"><i class="fa-solid fa-right-from-bracket" style="font-size:20px;color:black;"></i></button>
+</div>
+<div class="SideNav" id="sidenav">
+<button class="openbtn" onclick="openNav()">☰ </button>
+
+  <a href="index.html">Home</a>
+  <a href="profile.html">Profile</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="contactus.html">Contact Us</a>
+
+		<button class="logout" onclick="document.location='login.html'">Log out</button>
+</div>
+
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyD3P9pSKOr-ShnL1QxrMqAqssn6Tbkx0kI",
+	  authDomain: "module1-65658.firebaseapp.com",
+	  projectId: "module1-65658",
+	  storageBucket: "module1-65658.appspot.com",
+	  messagingSenderId: "42007575561",
+	  appId: "1:42007575561:web:25ce21e4f8a65b9ee50cd8",
+	  measurementId: "G-5T0KS89RGP"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+  </script>
+
+</body>
+</html>

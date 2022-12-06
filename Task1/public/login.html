@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+</head>
+
+<script >
+	
+
+	function loginValidator(e){
+			e.preventDefault();
+		let regularExpression  = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+		 let password = document.getElementById('password').value;
+		  if(password == "") {  
+       			customAlert("Invalid Password","Please enter the password!!!");
+    			 return false;  
+ 			 }  
+   
+ 		if(!regularExpression .test(password)) {  
+ 			customAlert("Login Failed","Please enter correct password. i.e Password99* ");
+    		 return false;  
+ 			 }  
+		
+	}
+
+
+function customAlert(strong , p){
+		let parent =document.getElementById('alert');
+		let elem1=document.getElementById('strong');
+		let elem2=document.getElementById('p'); 
+		let container=document.getElementById('overlay_container'); 
+
+
+		elem1.innerText=strong;
+		elem2.innerText=p;
+		container.style.cssText=
+		`
+		position:fixed;
+		z-index:1;
+		width:100vw;
+		height:100vh;
+		top:0;
+		left:0;
+		background:rgba(0,0,0,0.7);
+
+
+		`
+		parent.style.display='block';
+
+}
+</script>
+<body>
+
+	
+
+<div class="Container">
+
+	<div class="LoginContainer">
+
+		<img width="60px" height="60px" src="./images/logo.png" alt="logo">
+
+		<form class="form" onsubmit="loginValidator(event)">
+		<input type="email" name="email" id='email' placeholder="Email">
+		<input type="password" name="password" id="password" value='' placeholder="Password">
+		<input type="submit" name="submit" value="Login">
+		
+		</form>
+		
+	</div>
+	
+ <div class="OverlayContainer" id='overlay_container' >
+
+		<div class="alert" id='alert'>
+
+  		<strong id='strong'></strong>
+  		<p id='p'></p>
+  		<hr>
+  		<span class="closebtn" onclick="this.parentElement.parentElement.style.display='none';">Close</span> 
+		</div>
+	<!--  -->
+		</div>
+ 
+	</div>
+</div>
+
+
+
+</body>
+</html>
